@@ -1,125 +1,200 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>For Ayushi 🤍</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Georgia', serif;
-      background: #f4f4f4;
-      color: #222;
-      text-align: center;
-    }
+<meta charset="UTF-8">
+<title>For Sipra 💖</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
 
-    .hero {
-      height: 100vh;
-      background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
-      url('https://i.ibb.co/9HHpD35k/1bb2a739-04ac-4b6a-9a3c-b9c0dad028d5.jpg');
-      
-      background-size: cover;
-      background-position: center;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      color: white;
-      padding: 20px;
-    }
+body{
+  margin:0;
+  font-family: 'Georgia', serif;
+  background: linear-gradient(to right,#ffe6f0,#fff0f5);
+  text-align:center;
+  overflow-x:hidden;
+  color:#4b0033;
+}
 
-    .hero h1 {
-      font-size: 48px;
-      margin-bottom: 15px;
-      letter-spacing: 2px;
-    }
+/* HERO SECTION */
+.hero{
+  position:relative;
+  height:85vh;
+  background:url('https://i.postimg.cc/J4pFf8pN/f3f3c583-2797-4a63-8bad-5f65d5a9fe0c.jpg') no-repeat center center;
+  background-size:cover;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
 
-    .hero p {
-      font-size: 20px;
-      max-width: 600px;
-      line-height: 1.6;
-    }
+.overlay{
+  background:rgba(0,0,0,0.45);
+  padding:30px 40px;
+  border-radius:20px;
+  color:white;
+  backdrop-filter:blur(5px);
+}
 
-    .gallery {
-      padding: 60px 20px;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 25px;
-    }
+.overlay h1{
+  font-size:50px;
+  margin:0;
+  animation:heartbeat 1.5s infinite;
+}
 
-    .gallery img {
-      width: 260px;
-      border-radius: 18px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-      transition: 0.4s;
-    }
+@keyframes heartbeat{
+  0%,100%{transform:scale(1);}
+  50%{transform:scale(1.1);}
+}
 
-    .gallery img:hover {
-      transform: scale(1.06);
-    }
+.overlay p{
+  font-size:20px;
+  margin-top:10px;
+}
 
-    .message {
-      padding: 40px 20px;
-      font-size: 19px;
-      max-width: 700px;
-      margin: auto;
-      line-height: 1.8;
-    }
+/* GALLERY */
+.gallery{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:20px;
+  padding:60px 20px;
+}
 
-    button {
-      padding: 14px 30px;
-      font-size: 16px;
-      border: none;
-      background: #111;
-      color: white;
-      border-radius: 30px;
-      cursor: pointer;
-      transition: 0.3s;
-    }
+.gallery img{
+  width:100%;
+  border-radius:20px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.3);
+  transition:0.4s;
+}
 
-    button:hover {
-      background: #444;
-    }
+.gallery img:hover{
+  transform:scale(1.08);
+  box-shadow:0 15px 35px rgba(0,0,0,0.5);
+}
 
-    footer {
-      margin-top: 50px;
-      padding: 20px;
-      background: #111;
-      color: #eee;
-      font-size: 14px;
-    }
-  </style>
+/* MESSAGE */
+.message{
+  padding:40px 20px;
+  font-size:20px;
+  max-width:700px;
+  margin:auto;
+}
+
+button{
+  padding:14px 30px;
+  border:none;
+  background:#ff4da6;
+  color:white;
+  border-radius:30px;
+  font-size:18px;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+button:hover{
+  background:#ff1a75;
+  transform:scale(1.1);
+}
+
+/* POPUP */
+.modal{
+  display:none;
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,0.6);
+  justify-content:center;
+  align-items:center;
+}
+
+.modal-content{
+  background:#fff0f5;
+  padding:40px;
+  border-radius:20px;
+  font-size:22px;
+  animation:pop 0.5s ease;
+}
+
+@keyframes pop{
+  0%{transform:scale(0.5);opacity:0;}
+  100%{transform:scale(1);opacity:1;}
+}
+
+/* FLOATING HEARTS */
+.heart{
+  position:absolute;
+  font-size:20px;
+  animation:float 5s linear infinite;
+  color:#ff4da6;
+}
+
+@keyframes float{
+  0%{transform:translateY(0);opacity:1;}
+  100%{transform:translateY(-600px);opacity:0;}
+}
+
+footer{
+  padding:15px;
+  background:#ff4da6;
+  color:white;
+  margin-top:30px;
+}
+
+</style>
 </head>
-
 <body>
 
-  <div class="hero">
-    <h1>For Ayushi 🤍</h1>
-    <p>
-      Some people come into your life and quietly become everything.
-      You are that calm, strength and happiness for me.
-    </p>
+<div class="hero">
+  <div class="overlay">
+    <h1>Sipra 💖</h1>
+    <p>You are my forever, my happiness, and my sweetest blessing.</p>
   </div>
+</div>
 
-  <div class="gallery">
-    <img src="https://i.ibb.co/whQSsBnh/421083e6-48f7-4490-ac20-1dfc9175f2e4.jpg">
-    <img src="https://i.ibb.co/spdcZ6ch/997972ad-c5fe-48dd-a642-84f7656219c3.jpg">
-    <img src="https://i.ibb.co/bjhqZBGk/35e500e0-e2d8-4b93-9bd1-8e9979a43be7.jpg">
-   
+<div class="gallery">
+  <img src="https://i.postimg.cc/J4pFf8pN/f3f3c583-2797-4a63-8bad-5f65d5a9fe0c.jpg">
+  <img src="https://i.postimg.cc/YqdP57dN/3e864812-fcb0-4308-884a-f673cd8a01cb.jpg">
+  <img src="https://i.postimg.cc/PrS7gHSQ/91b5ba48-65f4-48fc-ba5c-f02ceebc56e7.jpg">
+  <img src="https://i.postimg.cc/HV73MqDV/b30dbfd2-461e-4163-b565-8d9afed2db71.jpg">
+</div>
+
+<div class="message">
+  Every heartbeat whispers your name, Sipra 💕  
+  <br><br>
+  <button onclick="showLove()">Tap for Love</button>
+</div>
+
+<footer>Made with Love — Purab 💖</footer>
+
+<div id="loveModal" class="modal">
+  <div class="modal-content">
+    💖 Sipra, you are my world, my smile, my everything! 💖
   </div>
+</div>
 
-  <div class="message">
-    I may not always say it perfectly,
-    but I value you, respect you, and choose you —
-    every single day.
-  </div>
+<script>
 
-  <button onclick="alert('You are truly special to me 🤍')">
-    Tap for something
-  </button>
+function showLove(){
+  document.getElementById("loveModal").style.display="flex";
+  setTimeout(()=>{
+    document.getElementById("loveModal").style.display="none";
+  },2500);
+}
 
-  <footer>
-    Made with sincerity — Purab 🤍
-  </footer>
+function createHeart(){
+  const heart=document.createElement("div");
+  heart.className="heart";
+  heart.innerHTML="💖";
+  heart.style.left=Math.random()*window.innerWidth+"px";
+  heart.style.fontSize=(15+Math.random()*20)+"px";
+  heart.style.top="100%";
+  document.body.appendChild(heart);
+  setTimeout(()=>{heart.remove();},5000);
+}
+
+setInterval(createHeart,500);
+
+</script>
 
 </body>
 </html>
